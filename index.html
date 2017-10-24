@@ -11,13 +11,26 @@
 		<title></title>
 	</head>
 	<body>
-		<!-- Accent-colored raised button with ripple -->
-	    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-	      Button
-	    </button>
-	    <!-- Colored FAB button -->
-	    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
-	      <i class="material-icons">add</i>
-	    </button>
+		<!-- Always shows a header, even in smaller screens. -->
+		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+		  <header class="mdl-layout__header">
+		    <div class="mdl-layout__header-row">
+		      <!-- Title -->
+		      <span class="mdl-layout-title">Home</span>
+		      <!-- Add spacer, to align navigation to the right -->
+		      <div class="mdl-layout-spacer"></div>
+		    </div>
+		  </header>
+		  <div class="mdl-layout__drawer">
+		    <span class="mdl-layout-title " style="padding-left: 10px;"><img src="pics/logo.gif" style="width: 220px;"></span>
+		    <nav class="mdl-navigation">
+		      <a class="mdl-navigation__link" href="index.html">Home</a>
+		      <a class="mdl-navigation__link" href="">Sign In</a>
+		    </nav>
+		  </div>
+		  <main class="mdl-layout__content">
+		    <div class="page-content"><!-- Your content goes here --></div>
+		  </main>
+		</div>
 	</body>
 </html>
