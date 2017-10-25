@@ -51,8 +51,18 @@
 
 			.mdl-navigation {
 				text-align:left;
-
 			}
+
+			.mdl-dialog {
+				text-align: left;
+				width: 720px;
+			}
+
+			.mdl-chip {
+				background-color: #3f51b5;
+				color: white;
+			}
+
 		</style>
 	</head>
 	<body>
@@ -95,7 +105,7 @@
 				    </tr>
 				  </thead>
 				  <tbody>
-				    <tr>
+				    <tr id="show-dialog">
 				      <td class="mdl-data-table__cell--non-numeric">Belinda	Peters</td>
 				      <td class="mdl-data-table__cell--non-numeric">Joao</td>
 				      <td>1</td>
@@ -151,8 +161,70 @@
 				    </tr>
 				  </tbody>
 				</table>
+				<dialog class="mdl-dialog">
+			    	<h4 class="mdl-dialog__title">Joao</h4>
+			    	<div class="mdl-dialog__content" style="padding-top: 0px;">
+			    		<h6 style="margin-top: 10px;">Belinda	Peters</h6>
+			    		<!-- Basic Chip -->
+						<span class="mdl-chip">
+						    <span class="mdl-chip__text">Dog</span>
+						</span>
+						<!-- Basic Chip -->
+						<span class="mdl-chip">
+						    <span class="mdl-chip__text">Golden Retriever</span>
+						</span>
+						<!-- Basic Chip -->
+						<span class="mdl-chip">
+						    <span class="mdl-chip__text">Arrieta Subdivision Batangas City</span>
+						</span>
+						<br><br>
+			    		<div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+						  <div class="mdl-tabs__tab-bar">
+						      <a href="#starks-panel" class="mdl-tabs__tab is-active">Vaccinations</a>
+						      <a href="#lannisters-panel" class="mdl-tabs__tab">Schedules</a>
+						      <a href="#targaryens-panel" class="mdl-tabs__tab">Notes</a>
+						  </div>
+
+						  <div class="mdl-tabs__panel is-active" id="starks-panel">
+						    <ul>
+						      <li>January 25, 2017</li>
+						      <li>March 25, 2017</li>
+						      <li>May 25, 2017</li>
+						      <li>August 25, 2017</li>
+						      <li>October 25, 2017</li>
+						    </ul>
+						  </div>
+						  <div class="mdl-tabs__panel" id="lannisters-panel">
+						    <ul>
+						      <li>December 25, 2017</li>
+						    </ul>
+						  </div>
+						  <div class="mdl-tabs__panel" id="targaryens-panel">
+						    <ul>
+						      <li>None</li>
+						    </ul>
+						  </div>
+						</div>
+			    	</div>
+			    	<div class="mdl-dialog__actions">
+			      		<button type="button" class="mdl-button close">Close</button>
+			    	</div>
+			  	</dialog>
 		    </div>
 		  </main>
 		</div>
+		<script>
+			var dialog = document.querySelector('dialog');
+		    var showDialogButton = document.querySelector('#show-dialog');
+		    if (! dialog.showModal) {
+		      dialogPolyfill.registerDialog(dialog);
+		    }
+		    showDialogButton.addEventListener('click', function() {
+		      dialog.showModal();
+		    });
+		    dialog.querySelector('.close').addEventListener('click', function() {
+		      dialog.close();
+		    });
+		</script>
 	</body>
 </html>
