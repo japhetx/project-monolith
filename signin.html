@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Material Design Lite -->
+	    <script src="mdl/material.min.js"></script>
+	    <link rel="stylesheet" href="mdl/material.min.css">
+	    <!-- Material Design icon font -->
+	    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	    <!-- So mobile devices will render correctly -->
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title></title>
+		<style>
+			body {
+			  background: #e2e1e0;
+			  text-align: center;
+			}
+			.card {
+			  background: #fff;
+			  border-radius: 2px;
+			  display: inline-block;
+			  height: 400px;
+			  margin: 1rem;
+			  position: relative;
+			  width: 480px;
+			}
+			.card {
+			  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Always shows a header, even in smaller screens. -->
+		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+		  <header class="mdl-layout__header">
+		    <div class="mdl-layout__header-row">
+		      <!-- Title -->
+		      <span class="mdl-layout-title">OCVAS Staff Log In</span>
+		      <!-- Add spacer, to align navigation to the right -->
+		      <div class="mdl-layout-spacer"></div>
+		    </div>
+		  </header>
+		  <div class="mdl-layout__drawer">
+		    <span class="mdl-layout-title " style="padding-left: 10px;"><img src="pics/logo.gif" style="width: 220px;"></span>
+		    <nav class="mdl-navigation">
+		      <a class="mdl-navigation__link" href="index.html">Home</a>
+		      <a class="mdl-navigation__link" href="signin.html">Sign In</a>
+		    </nav>
+		  </div>
+		  <main class="mdl-layout__content">
+		    <div class="page-content">
+		    	<!-- Your content goes here -->
+		    	<div class="card">
+		    		<br><br>
+		    		<h3 style="margin-top: 10px;">OCVAS Staff Sign In</h3>
+		    		<br><br>
+		    		<form action="#">
+					  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+					    <input class="mdl-textfield__input" type="text" id="sample3">
+					    <label class="mdl-textfield__label" for="sample3">Username</label>
+					  </div>
+					</form>
+					<form action="#">
+					  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+					    <input class="mdl-textfield__input" type="Password" id="sample3">
+					    <label class="mdl-textfield__label" for="sample3">Password</label>
+					  </div>
+					</form>
+					<br><br>
+					<!-- Colored raised button -->
+					<a href="dashboard.html">
+					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
+					  Sign In
+					</button>
+					</a>
+		    	</div>
+		    </div>
+		  </main>
+		</div>
+	</body>
+</html>
