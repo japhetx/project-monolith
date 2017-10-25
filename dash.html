@@ -8,6 +8,59 @@
     <link rel="stylesheet" href="styles.css">
     <title></title>
     <style>
+      body {
+        background: #e2e1e0;
+        text-align: center;
+      }
+
+      .card {
+        background: #fff;
+        border-radius: 2px;
+        display:block;
+        height: 63px;
+        margin:1em auto;
+        margin-top:  33px;
+        margin-bottom: 0px;
+        position: center;
+        width: 610px;
+      } 
+
+      .card-1 {
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+      }
+
+      .mdl-textfield {
+        width: 514px;
+      }
+
+      .mdl-textfield__label:after {
+        background-color: #ffffff; 
+      }
+
+      .mdl-textfield__input {
+        border-bottom: 0px;
+      }
+
+      .table {
+        margin:1em auto;
+        width: 945px;
+        margin-top: 45px;
+      }
+
+      .mdl-navigation {
+        text-align:left;
+      }
+
+      .mdl-dialog {
+        text-align: left;
+        width: 720px;
+      }
+
+      .mdl-chip {
+        background-color: #3f51b5;
+        color: white;
+      }
+
     </style>
   </head>
   <body>
@@ -53,13 +106,172 @@
           </div>
         </header>
         <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
-          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Home</a>
+          <a class="mdl-navigation__link" href="add.html"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Home</a>
           <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">add_circle_outline</i>Add</a>
           <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">assignment</i>Report</a>
           <a class="mdl-navigation__link" href="index.html"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">exit_to_app</i>Sign out</a>
         </nav>
       </div>
+      <main class="mdl-layout__content">
+        <div class="page-content">
+          <!-- Your content goes here -->
+          <div class="card card-1">
+          <!-- Simple Textfield -->
+          <form action="#">
+            <div class="mdl-textfield mdl-js-textfield">
+              <input class="mdl-textfield__input" type="text" id="sample1">
+              <label class="mdl-textfield__label" for="sample1">Search</label>
+            </div>
+          </form>
+        </div>
+        <table class="mdl-data-table mdl-js-data-table table">
+          <thead>
+            <tr>
+              <th class="mdl-data-table__cell--non-numeric">Owner's Name</th>
+              <th class="mdl-data-table__cell--non-numeric">Pet's Name</th>
+              <th>Age</th>
+              <th class="mdl-data-table__cell--non-numeric">Living?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr id="show-dialog">
+              <td class="mdl-data-table__cell--non-numeric">Belinda Peters</td>
+              <td class="mdl-data-table__cell--non-numeric">Joao</td>
+              <td>1</td>
+              <td class="mdl-data-table__cell--non-numeric">No</td>
+            </tr>
+            <tr>
+              <td class="mdl-data-table__cell--non-numeric">Kathy Tran</td>
+              <td class="mdl-data-table__cell--non-numeric">Rigby</td>
+              <td>3</td>
+              <td class="mdl-data-table__cell--non-numeric">No</td>
+            </tr>
+            <tr>
+              <td class="mdl-data-table__cell--non-numeric">Edmund  Porter</td>
+              <td class="mdl-data-table__cell--non-numeric">Jaja</td>
+              <td>1</td>
+              <td class="mdl-data-table__cell--non-numeric">Yes</td>
+            </tr>
+            <tr>
+              <td class="mdl-data-table__cell--non-numeric">Duane Ramsey</td>
+              <td class="mdl-data-table__cell--non-numeric">Popoy</td>
+              <td>4</td>
+              <td class="mdl-data-table__cell--non-numeric">Yes</td>
+            </tr>
+            <tr>
+              <td class="mdl-data-table__cell--non-numeric">Reginald  Walsh</td>
+              <td class="mdl-data-table__cell--non-numeric">Dorito</td>
+              <td>1</td>
+              <td class="mdl-data-table__cell--non-numeric">No</td>
+            </tr>
+            <tr>
+              <td class="mdl-data-table__cell--non-numeric">Alice Vasquez</td>
+              <td class="mdl-data-table__cell--non-numeric">Rapture</td>
+              <td>3</td>
+              <td class="mdl-data-table__cell--non-numeric">No</td>
+            </tr>
+            <tr>
+              <td class="mdl-data-table__cell--non-numeric">Eloise  Peterson</td>
+              <td class="mdl-data-table__cell--non-numeric">Linux</td>
+              <td>1</td>
+              <td class="mdl-data-table__cell--non-numeric">Yes</td>
+            </tr>
+            <tr>
+              <td class="mdl-data-table__cell--non-numeric">Bernard Hart</td>
+              <td class="mdl-data-table__cell--non-numeric">Zipper</td>
+              <td>4</td>
+              <td class="mdl-data-table__cell--non-numeric">Yes</td>
+            </tr>
+          <tr>
+              <td class="mdl-data-table__cell--non-numeric">Dewey Mccarthy</td>
+              <td class="mdl-data-table__cell--non-numeric">Bonjing</td>
+              <td>4</td>
+              <td class="mdl-data-table__cell--non-numeric">Yes</td>
+            </tr>
+          </tbody>
+        </table>
+        <dialog class="mdl-dialog">
+            <h4 class="mdl-dialog__title">Joao</h4>
+            <div class="mdl-dialog__content" style="padding-top: 0px;">
+              <h6 style="margin-top: 10px;">Belinda Peters</h6>
+              <!-- Basic Chip -->
+            <span class="mdl-chip" id="tt1">
+                <span class="mdl-chip__text">Dog</span>
+            </span>
+            <div class="mdl-tooltip mdl-tooltip--large" for="tt1">
+            Pet type
+            </div>
+
+            <!-- Basic Chip -->
+            <span class="mdl-chip" id="tt2">
+                <span class="mdl-chip__text">1 years old</span>
+            </span>
+            <div class="mdl-tooltip mdl-tooltip--large" for="tt2">
+            Age
+            </div>
+
+            <!-- Basic Chip -->
+            <span class="mdl-chip" id="tt3">
+                <span class="mdl-chip__text">Golden Retriever</span>
+            </span>
+            <div class="mdl-tooltip mdl-tooltip--large" for="tt3">
+            Breed
+            </div>
+            <!-- Basic Chip -->
+            <span class="mdl-chip" id="tt4">
+                <span class="mdl-chip__text">Arrieta Subdivision Batangas City</span>
+            </span>
+            <div class="mdl-tooltip mdl-tooltip--large" for="tt4">
+            Address
+            </div>
+            <br><br>
+              <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+              <div class="mdl-tabs__tab-bar">
+                  <a href="#starks-panel" class="mdl-tabs__tab is-active">Vaccinations</a>
+                  <a href="#lannisters-panel" class="mdl-tabs__tab">Schedules</a>
+                  <a href="#targaryens-panel" class="mdl-tabs__tab">Notes</a>
+              </div>
+
+              <div class="mdl-tabs__panel is-active" id="starks-panel">
+                <ul>
+                  <li>January 25, 2017</li>
+                  <li>March 25, 2017</li>
+                  <li>May 25, 2017</li>
+                  <li>August 25, 2017</li>
+                  <li>October 25, 2017</li>
+                </ul>
+              </div>
+              <div class="mdl-tabs__panel" id="lannisters-panel">
+                <ul>
+                  <li>December 25, 2017</li>
+                </ul>
+              </div>
+              <div class="mdl-tabs__panel" id="targaryens-panel">
+                <ul>
+                  <li>None</li>
+                </ul>
+              </div>
+            </div>
+            </div>
+            <div class="mdl-dialog__actions">
+                <button type="button" class="mdl-button close">Close</button>
+            </div>
+          </dialog>
+        </div>
+      </main>
     </div>
-    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script>
+      var dialog = document.querySelector('dialog');
+        var showDialogButton = document.querySelector('#show-dialog');
+        if (! dialog.showModal) {
+          dialogPolyfill.registerDialog(dialog);
+        }
+        showDialogButton.addEventListener('click', function() {
+          dialog.showModal();
+        });
+        dialog.querySelector('.close').addEventListener('click', function() {
+          dialog.close();
+        });
+    </script>
   </body>
 </html>
