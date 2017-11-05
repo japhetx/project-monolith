@@ -25,10 +25,43 @@
 	    <link rel="stylesheet" href="style.css">
 
 	    <style>
-	   	body {
-			background: #fff;
+	    body {
+	    	background: #fafafa;
+	    }
+
+	    .sign-in-card {
+	    	background: #fff;
+			height: 300px;
+			position: relative;
+			width: 468px;
+			box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+			margin: 0px auto;
+			margin-top: 137px;
+			border-radius: 3px;
+			border-top-left-radius: 3px;
+			border-top-right-radius: 3px;
+			border-bottom-right-radius: 3px;
+			border-bottom-left-radius: 3px;
 		}
 
+		.sign-in-title {
+			margin-top: 13px;
+			margin-left: 126px;
+			position: absolute;
+		}
+
+		.username-password-card {
+			position: absolute;
+			top: 90px;
+			left: 78px;
+
+		}
+
+		.sign-in-button {
+			position: absolute;
+			bottom: 30px;
+			left: 190px;
+		}
 	    </style>
 	</head>
 	<body>
@@ -46,7 +79,7 @@
 	          <natemv class="mdl-navigation mdl-layout--large-screen-only">
 	          	<a class="mdl-navigation__link change-link-color-black" href="">CONTACT</a>
 	            <a class="mdl-navigation__link change-link-color-black" href="">ABOUT</a>
-	            <a class="mdl-navigation__link change-link-color-black" href="">
+	            <a class="mdl-navigation__link change-link-color-black" href="sign-in.html">
 	            	<!-- Colored button -->
 					<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored removed-button-shadow change-button-color-blue change-hover-button-color-blue change-button-border">
 					  SIGN IN
@@ -58,18 +91,36 @@
 	      <main class="mdl-layout__content">
 	        <div class="page-content">
 	        	<!-- Your content goes here -->
-	        	
+	        	<div class="sign-in-card">
+	        		<div class="sign-in-title">
+		        		<center>
+		        			<h5>OCVAS Staff Sign In</h5>
+		        		</center>
+	        		</div>
+	        		<div class="username-password-card">
+		        		<form action="#">
+						  <div class="mdl-textfield mdl-js-textfield">
+						    <input class="mdl-textfield__input" type="text" id="sample1">
+						    <label class="mdl-textfield__label" for="sample1">Username</label>
+						  </div>
+						</form>
+						<form action="#">
+						  <div class="mdl-textfield mdl-js-textfield">
+						    <input class="mdl-textfield__input" type="password" id="sample1">
+						    <label class="mdl-textfield__label" for="sample1">Password</label>
+						  </div>
+						</form>
+					</div>
+					<div class="sign-in-button">
+						<a href="dashboard.html">
+							<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+							  Sign In
+							</button>
+						</a>
+					</div>
+	        	</div>
 	        </div>
 	      </main>
 	    </div>
-	    <!-- Transparent Footer -->
-	    <footer class="mdl-mini-footer change-transparent-footer change-center-footer">
-		  <div class="mdl-mini-footer__-section">
-		    <div class="mdl-logo">Online Dogs and Cats Anti-Rabies Vaccination Record</div>
-		    <ul class="mdl-mini-footer__link-list">
-		      <li>© 2017</li>
-		    </ul>
-		  </div>
-		</footer>
 	</body>
 </html>
