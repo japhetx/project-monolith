@@ -1,12 +1,19 @@
 <!doctype html>
 <html lang="en">
 	<head>
+		<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	    <meta name="description" content="Management Information System that will organize the vaccination record for OCVAS Veterinary Services Division.">
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 	    <title>Online Vaccination Record | OCVAS · Veterinary Services Division</title>
 
 	    <!-- Favicon -->
-	    <link rel="icon" href="images/favicon.png">
+	    <link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+		<link rel="manifest" href="favicons/manifest.json">
+		<link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="theme-color" content="#ffffff">
 
 		<!-- Material Design Lite -->
 		<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-blue.min.css">
@@ -24,103 +31,41 @@
 	   	<!-- Template CSS -->
 	    <link rel="stylesheet" href="style.css">
 
+	    <!-- Page Style -->
 	    <style>
-		.content-title {
-			margin: auto;
-			margin-top: 270px;
-			color: #fff;
-			text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
-		}
-		.search-card {
-			background: #fff;
-		    height: 63px;
-		    margin: auto;
-		    position: relative;
-		    width: 850px;
-		    margin-top: 5px;
-		    border-radius: 3px;
-		    border-top-left-radius: 3px;
-		    border-top-right-radius: 3px;
-		    border-bottom-right-radius: 3px;
-		    border-bottom-left-radius: 3px;
-		}
-
-		.search-card-elevate {
-			box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-			transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-		}
-
-		.search-card-elevate:hover {
-			box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-		}
-
-		form.add-pad-textfield{
-			padding-left: 25px;
-		}
-
-		.mdl-textfield__input.change-search-size.remove-border{
-			border-bottom: none;
-			width: 800px;
-		}
-
-		.mdl-textfield__label.remove-colored-border:after {
-			background-color: white;
-		}
+		
 	    </style>
 	</head>
 	<body>
-		 <!-- Always shows a header -->
-	    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-	      <header class="mdl-layout__header change-header-color-white">
-	        <div class="mdl-layout__header-row">
-	          <!-- Header Title -->
-	          <a class="mdl-navigation__link" href="index.html">
-	          		<span class="mdl-layout-title change-title-font-productsans">OCVAS &#8729; Veterinary Services Division</span>
-	          </a>
-	          <!-- Add spacer, to align navigation to the right -->
-	          <div class="mdl-layout-spacer"></div>
-	          <!-- Navigation -->
-	          <nav class="mdl-navigation">
-	          	<a class="mdl-navigation__link change-link-color-black" href="">CONTACT</a>
-	            <a class="mdl-navigation__link change-link-color-black" href="">ABOUT</a>
-	            <a class="mdl-navigation__link change-link-color-black" href="sign-in.html">
-	            	<!-- Colored button -->
-					<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored removed-button-shadow change-button-color-blue change-hover-button-color-blue change-button-border">
-					  SIGN IN
-					</button>
-	            </a>
-	          </nav>
-	        </div>
-	      </header>
-	      <main class="mdl-layout__content">
-	        <div class="page-content">
-	        	<!-- Content Title -->
-	        	<div class="content-title">
-		        	<center>
-		        		<h1>Online Vaccination Record</h1>
-		        	</center>	
-	        	</div>
-	        	<!-- Search bar  -->
-	        	<div class="search-card search-card-elevate">
-	        		<form class="add-pad-textfield" method="get" action="search-result.html">
-					  <div class="mdl-textfield mdl-js-textfield">
-					    <input class="mdl-textfield__input change-search-size remove-border" type="text" id="sample1">
-					    <label class="mdl-textfield__label remove-colored-border" for="sample1">Search your pet name here...</label>
-					  </div>
-					</form>
-	        	</div>
-
-	        </div>
-	      </main>
-	    </div>
-	    <!-- Transparent Footer -->
-	    <footer class="mdl-mini-footer change-transparent-footer change-center-footer">
-		  <div class="mdl-mini-footer__-section">
-		    <div class="mdl-logo">Online Dogs and Cats Anti-Rabies Vaccination Record</div>
-		    <ul class="mdl-mini-footer__link-list">
-		      <li>&copy; 2017</li>
-		    </ul>
+		<!-- Always shows a header, even in smaller screens. -->
+		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+		  <header class="mdl-layout__header">
+		    <div class="mdl-layout__header-row">
+		      <!-- Title -->
+		      <span class="mdl-layout-title">Title</span>
+		      <!-- Add spacer, to align navigation to the right -->
+		      <div class="mdl-layout-spacer"></div>
+		      <!-- Navigation. We hide it in small screens. -->
+		      <nav class="mdl-navigation mdl-layout--large-screen-only">
+		        <a class="mdl-navigation__link" href="">Link</a>
+		        <a class="mdl-navigation__link" href="">Link</a>
+		        <a class="mdl-navigation__link" href="">Link</a>
+		        <a class="mdl-navigation__link" href="">Link</a>
+		      </nav>
+		    </div>
+		  </header>
+		  <div class="mdl-layout__drawer">
+		    <span class="mdl-layout-title">Title</span>
+		    <nav class="mdl-navigation">
+		      <a class="mdl-navigation__link" href="">Link</a>
+		      <a class="mdl-navigation__link" href="">Link</a>
+		      <a class="mdl-navigation__link" href="">Link</a>
+		      <a class="mdl-navigation__link" href="">Link</a>
+		    </nav>
 		  </div>
-		</footer>
+		  <main class="mdl-layout__content">
+		    <div class="page-content"><!-- Your content goes here --></div>
+		  </main>
+		</div>
 	</body>
 </html>
