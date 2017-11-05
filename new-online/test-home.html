@@ -28,41 +28,44 @@
 
 	    <style>
 	   	body {
-	   		background: url('https://images.unsplash.com/photo-1502888959209-5ac0c5319f94?auto=format&fit=crop&w=1952&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D') center / cover;
+	   		background: linear-gradient(rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.3)), url('https://static.pexels.com/photos/46024/pexels-photo-46024.jpeg') center / cover;
 	   	}
 
-	   	.mdl-layout__header {
+	   	.mdl-layout__header.change-header-color-white {
 	   		background-color: #fff;
 	   	}
 
-	   	.mdl-layout-title {
+	   	.mdl-layout-title.change-title-font-productsans{
 	   		color: #424242;
 	   		font-family: 'Product Sans', Arial, sans-serif;
 	   	}
 
-	   	.mdl-layout__header-row .mdl-navigation__link {
+	   	.mdl-layout__header-row .mdl-navigation__link.change-link-color-black{
 	   		color: #424242;
 	   	}
 
-	   	.mdl-button--raised {
+	   	.mdl-button--raised.removed-button-shadow.change-button-color-blue{
 	   		box-shadow: none;
-	   	}
-
-	   	.mdl-button--raised.mdl-button--colored {
 	   		background: #448aff;
 	   	}
 
-	   	.mdl-button--raised.mdl-button--colored:hover {
+	   	.mdl-button--raised.change-hover-button-color-blue.mdl-button--colored:hover{
 		    background: #448aff;
 		}
 
-		.card {
+		.content-title {
+			margin: auto;
+			margin-top: 270px;
+			color: #fff;
+			text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+		}
+		.search-card {
 			background: #fff;
 		    height: 63px;
 		    margin: auto;
 		    position: relative;
 		    width: 850px;
-		    margin-top: 410px;
+		    margin-top: 5px;
 		    border-radius: 3px;
 		    border-top-left-radius: 3px;
 		    border-top-right-radius: 3px;
@@ -70,13 +73,37 @@
 		    border-bottom-left-radius: 3px;
 		}
 
-		.card-1 {
+		.search-card-elevate {
 			box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 			transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 		}
 
-		.card-1:hover {
+		.search-card-elevate:hover {
 			box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+		}
+
+		form.add-pad-textfield{
+			padding-left: 25px;
+		}
+
+		.mdl-textfield__input.change-search-size.remove-border{
+			border-bottom: none;
+			width: 800px;
+		}
+
+		.mdl-textfield__label.remove-colored-border:after {
+			background-color: white;
+		}
+
+		.mdl-mini-footer.change-transparent-footer.change-center-footer{
+			position: absolute;
+			bottom:0px;
+		    right:25%;
+		    left:50%;
+		    margin-left:-210px;
+			padding: 1rem;
+			background-color: transparent;
+			opacity: 0.5;
 		}
 
 	    </style>
@@ -84,20 +111,21 @@
 	<body>
 		 <!-- Always shows a header, even in smaller screens. -->
 	    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-	      <header class="mdl-layout__header">
+	      <header class="mdl-layout__header change-header-color-white">
 	        <div class="mdl-layout__header-row">
-	          <!-- Title -->
-	          <span class="mdl-layout-title">OCVAS - Veterinary Services Division</span>
-	          
+	          <!-- Header Title -->
+	          <a class="mdl-navigation__link" href="test-home.html">
+	          		<span class="mdl-layout-title change-title-font-productsans">OCVAS - Veterinary Services Division</span>
+	          </a>
 	          <!-- Add spacer, to align navigation to the right -->
 	          <div class="mdl-layout-spacer"></div>
 	          <!-- Navigation. We hide it in small screens. -->
 	          <nav class="mdl-navigation mdl-layout--large-screen-only">
-	          	<a class="mdl-navigation__link" href="">CONTACT</a>
-	            <a class="mdl-navigation__link" href="">ABOUT</a>
-	            <a class="mdl-navigation__link" href="">
+	          	<a class="mdl-navigation__link change-link-color-black" href="">CONTACT</a>
+	            <a class="mdl-navigation__link change-link-color-black" href="">ABOUT</a>
+	            <a class="mdl-navigation__link change-link-color-black" href="">
 	            	<!-- Colored raised button -->
-					<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+					<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored removed-button-shadow change-button-color-blue change-hover-button-color-blue">
 					  SIGN IN
 					</button>
 	            </a>
@@ -106,9 +134,31 @@
 	      </header>
 	      <main class="mdl-layout__content">
 	        <div class="page-content">
-	        	<div class="card card-1"></div>
+	        	<!-- Content Title -->
+	        	<div class="content-title">
+		        	<center>
+		        		<h1>Online Vaccination Record</h1>
+		        	</center>	
+	        	</div>
+	        	<!-- Search bar -->
+	        	<div class="search-card search-card-elevate">
+	        		<form class="add-pad-textfield" action="#">
+					  <div class="mdl-textfield mdl-js-textfield">
+					    <input class="mdl-textfield__input change-search-size remove-border" type="text" id="sample1">
+					    <label class="mdl-textfield__label remove-colored-border" for="sample1">Search pet name here</label>
+					  </div>
+					</form>
+	        	</div>
 	        </div>
 	      </main>
 	    </div>
+	    <footer class="mdl-mini-footer change-transparent-footer change-center-footer">
+		  <div class="mdl-mini-footer__-section">
+		    <div class="mdl-logo">Online Dogs and Cats Anti-Rabies Vaccination Record</div>
+		    <ul class="mdl-mini-footer__link-list">
+		      <li>© 2017</li>
+		    </ul>
+		  </div>
+		</footer>
 	</body>
 </html>
