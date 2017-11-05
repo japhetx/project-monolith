@@ -1,0 +1,56 @@
+body {
+	background: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.5)), url('https://static.pexels.com/photos/46024/pexels-photo-46024.jpeg') center / cover;
+}
+
+.mdl-layout__header.change-header-color-white {
+	background-color: #fff;
+}
+
+.mdl-layout-title.change-title-font-productsans{
+	color: #424242;
+	font-family: 'Product Sans', Arial, sans-serif;
+}
+
+.mdl-layout__header-row .mdl-navigation__link.change-link-color-black{
+	color: #424242;
+}
+
+.mdl-button--raised.removed-button-shadow.change-button-color-blue{
+	box-shadow: none;
+	background: #448aff;
+}
+
+.mdl-button--raised.change-hover-button-color-blue.mdl-button--colored:hover{
+	background: #448aff;
+}
+
+.mdl-button--raised.change-button-border {
+	border-radius: 3px;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+}
+
+.mdl-mini-footer.change-transparent-footer.change-center-footer{
+	position: absolute;
+	bottom:0px;
+	right:25%;
+	left:50%;
+	margin-left:-210px;
+	padding: 1rem;
+	background-color: transparent;
+	opacity: 0.3;
+}
+
+
+.mdl-mini-footer.change-transparent-footer.change-center-footer{
+	position: absolute;
+	bottom:0px;
+    right:25%;
+    left:50%;
+    margin-left:-210px;
+	padding: 1rem;
+	background-color: transparent;
+	opacity: 0.3;
+}
